@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown, ArrowUpRight, Github, Linkedin, Mail, Menu, X, Code2, ShieldCheck, Bug, Database, Terminal, Layers } from "lucide-react";
@@ -45,13 +44,6 @@ export default function Home() {
         <p className="intro">I&apos;m <strong>Piyush Raj</strong> — a CSE student building thoughtful digital experiences and sharpening my craft one commit at a time.</p>
         <div className="actions"><a className="btn" href="#projects">Explore my work <ArrowUpRight size={17}/></a><a className="plain" href="#contact">Get in touch <ArrowDown size={15}/></a></div>
         <p className="meta">INDIA <b/> DEVELOPMENT · QA · CYBERSECURITY</p>
-      </div>
-      <div className="art-wrap">
-        <div className="art-frame">
-          <Image src="/samurai-hero.jpg" alt="A lone samurai silhouetted against a glowing red moon" fill priority sizes="(max-width: 850px) 100vw, 58vw" className="art"/>
-          <div className="shade"/><div className="kanji">浪人</div>
-          <div className="art-foot"><span>01 / THE RONIN</span><span>DISCIPLINE OVER NOISE</span></div>
-        </div><div className="seal">無<small>LIMITLESS</small></div>
       </div>
       <a className="scroll" href="#about">↓ &nbsp; SCROLL TO BEGIN</a>
     </section>

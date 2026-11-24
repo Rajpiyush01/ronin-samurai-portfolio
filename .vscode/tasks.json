@@ -1,0 +1,58 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Remove image, list assets, and build",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"-e",
+				"const fs=require('fs'),p=require('path'),{spawnSync}=require('child_process');try{fs.unlinkSync('public/samurai-hero.jpg')}catch(e){if(e.code!=='ENOENT')throw e}function walk(d,n=0){for(const x of fs.readdirSync(d,{withFileTypes:true})){const q=p.join(d,x.name);if(x.isFile()&&n<=3&&/\\.(png|jpe?g|webp|gif|svg)$/i.test(x.name))console.log('./'+q.replace(/\\\\/g,'/'));if(x.isDirectory()&&n<3)walk(q,n+1)}}walk('.');const r=spawnSync(process.platform==='win32'?'npm.cmd':'npm',['run','build'],{stdio:'inherit'});process.exit(r.status===null?1:r.status)"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Remove samurai image asset",
+			"type": "shell",
+			"command": "cmd /c \"if exist \\\"public\\\\samurai-hero.jpg\\\" del /f /q \\\"public\\\\samurai-hero.jpg\\\" && dir /b \\\"public\\\"\"",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Delete samurai background image",
+			"type": "shell",
+			"command": "powershell -NoProfile -Command \"if (Test-Path 'D:\\ronin-portfolio-v2\\public\\samurai-hero.jpg') { Remove-Item 'D:\\ronin-portfolio-v2\\public\\samurai-hero.jpg' -Force }; Get-ChildItem 'D:\\ronin-portfolio-v2\\public' | Select-Object -ExpandProperty Name\"",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Delete image asset",
+			"type": "shell",
+			"command": "cmd /c \"if exist \\\"D:\\ronin-portfolio-v2\\public\\samurai-hero.jpg\\\" del /f /q \\\"D:\\ronin-portfolio-v2\\public\\samurai-hero.jpg\\\" & dir /b \\\"D:\\ronin-portfolio-v2\\public\\\"\"",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Delete image asset 2",
+			"type": "shell",
+			"command": "cmd /c \"if exist \\\"D:\\ronin-portfolio-v2\\public\\samurai-hero.jpg\\\" del /f /q \\\"D:\\ronin-portfolio-v2\\public\\samurai-hero.jpg\\\" ^& dir /b \\\"D:\\ronin-portfolio-v2\\public\\\"\"",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Delete samurai image file",
+			"type": "shell",
+			"command": "del /f /q \"D:\\ronin-portfolio-v2\\public\\samurai-hero.jpg\"; Get-ChildItem \"D:\\ronin-portfolio-v2\\public\" | Select-Object -ExpandProperty Name",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Remove image file safely",
+			"type": "shell",
+			"command": "Remove-Item -LiteralPath \"D:\\ronin-portfolio-v2\\public\\samurai-hero.jpg\" -Force; Get-ChildItem \"D:\\ronin-portfolio-v2\\public\" | Select-Object -ExpandProperty Name",
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}
