@@ -53,6 +53,20 @@
 			"command": "Remove-Item -LiteralPath \"D:\\ronin-portfolio-v2\\public\\samurai-hero.jpg\" -Force; Get-ChildItem \"D:\\ronin-portfolio-v2\\public\" | Select-Object -ExpandProperty Name",
 			"isBackground": false,
 			"problemMatcher": []
+		},
+		{
+			"label": "Build professional portfolio",
+			"type": "shell",
+			"command": "npm run build",
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Verify professional portfolio build",
+			"type": "shell",
+			"command": "npm run build",
+			"isBackground": false,
+			"group": "build"
 		}
 	]
 }

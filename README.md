@@ -1,6 +1,6 @@
-# Ronin Portfolio V2 — Samurai Edition
+# Piyush Raj Portfolio
 
-A redesigned black-and-dark-red portfolio starter for Piyush Raj. This version includes a minimal, high-contrast layout with responsive navigation, animated scroll progress, motion-revealed skill cards, and About / Projects / Skills / Journey / Contact sections.
+A professional portfolio starter for Piyush Raj. It includes a responsive dark interface, animated scroll progress, motion-revealed skill cards, and About / Projects / Skills / Journey / Contact sections.
 
 ## Run locally
 Install Node.js 20.9 or newer, then:

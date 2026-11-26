@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 export const metadata: Metadata = {
-  title: "Piyush Raj | The Ronin Portfolio",
-  description: "Developer, learner, and creator — walking the path of the Ronin."
+  title: "Piyush Raj | Software Developer",
+  description: "Portfolio of Piyush Raj — CSE student and aspiring software developer."
 };
 export default function RootLayout({ children }: Readonly<{children: React.ReactNode}>) {
   return <html lang="en"><body>{children}</body></html>;

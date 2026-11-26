@@ -32,55 +32,55 @@ export default function Home() {
   return <main>
     <motion.div className="progress" style={{width}} />
     <header className="topbar">
-      <a className="brand" href="#home"><b>浪</b> RONIN<span>.</span></a>
+      <a className="brand" href="#home">PIYUSH RAJ<span>.</span></a>
       <button className="menu" onClick={()=>setOpen(!open)} aria-label="Toggle navigation">{open?<X/>:<Menu/>}</button>
-      <nav className={open?"nav open":"nav"}>{nav.map(n=><a key={n} className={active===n.toLowerCase()?"active":""} href={"#"+n.toLowerCase()} onClick={()=>setOpen(false)}>{n}</a>)}<a className="nav-cta" href="#contact">LET&apos;S TALK ↗</a></nav>
+      <nav className={open?"nav open":"nav"}>{nav.map(n=><a key={n} className={active===n.toLowerCase()?"active":""} href={"#"+n.toLowerCase()} onClick={()=>setOpen(false)}>{n}</a>)}<a className="nav-cta" href="#contact">Contact ↗</a></nav>
     </header>
 
     <section id="home" className="hero wrap">
       <div className="hero-copy">
-        <p className="eyebrow"><i/> THE PATH OF A CREATOR</p>
-        <h1>Quiet mind.<br/><em>Sharp</em> execution.</h1>
-        <p className="intro">I&apos;m <strong>Piyush Raj</strong> — a CSE student building thoughtful digital experiences and sharpening my craft one commit at a time.</p>
-        <div className="actions"><a className="btn" href="#projects">Explore my work <ArrowUpRight size={17}/></a><a className="plain" href="#contact">Get in touch <ArrowDown size={15}/></a></div>
-        <p className="meta">INDIA <b/> DEVELOPMENT · QA · CYBERSECURITY</p>
+        <p className="eyebrow"><i/> Software developer in progress</p>
+        <h1>Building reliable<br/><em>digital products.</em></h1>
+        <p className="intro">I&apos;m <strong>Piyush Raj</strong>, a CSE student focused on web development, software quality, and cybersecurity. I turn ideas into clear, useful, and dependable experiences.</p>
+        <div className="actions"><a className="btn" href="#projects">View my work <ArrowUpRight size={17}/></a><a className="plain" href="#contact">Get in touch <ArrowDown size={15}/></a></div>
+        <p className="meta">India <b/> Development · QA · Cybersecurity</p>
       </div>
-      <a className="scroll" href="#about">↓ &nbsp; SCROLL TO BEGIN</a>
+      <a className="scroll" href="#about">↓ &nbsp; Explore profile</a>
     </section>
 
     <section id="about" className="section wrap">
-      <p className="index">01 <span>— ABOUT THE RONIN</span></p>
-      <div className="two"><div><p className="eyebrow">A LITTLE ABOUT ME</p><h2>Still learning.<br/><em>Always moving.</em></h2></div>
-      <div className="bodycopy"><p>I enjoy turning ideas into useful interfaces, understanding how systems work, and finding the details that make software dependable. My interests sit at the intersection of <strong>web development, software quality, and cybersecurity.</strong></p><p>This portfolio is my evolving dojo: a place to document what I build, what I learn, and where I&apos;m heading next.</p><div className="principles">01 / CURIOSITY　 02 / CONSISTENCY　 03 / CRAFT</div></div></div>
+      <p className="index">01 <span>— About</span></p>
+      <div className="two"><div><p className="eyebrow">Profile overview</p><h2>Curious by default.<br/><em>Practical by design.</em></h2></div>
+      <div className="bodycopy"><p>I enjoy turning ideas into useful interfaces, understanding how systems work, and finding the details that make software dependable. My interests sit at the intersection of <strong>web development, software quality, and cybersecurity.</strong></p><p>I&apos;m continuously improving my technical foundations while building projects that demonstrate thoughtful decisions, clean implementation, and measurable progress.</p><div className="principles">01 / Curiosity　 02 / Consistency　 03 / Craft</div></div></div>
     </section>
 
     <section id="projects" className="section wrap">
-      <p className="index">02 <span>— SELECTED WORK</span></p>
-      <div className="heading"><div><p className="eyebrow">THE WORK SPEAKS</p><h2>Projects in the <em>forge.</em></h2></div><p className="note">Starter entries only. Replace these with your real project details and repository links before publishing.</p></div>
+      <p className="index">02 <span>— Selected work</span></p>
+      <div className="heading"><div><p className="eyebrow">Portfolio</p><h2>Projects with <em>purpose.</em></h2></div><p className="note">A selection of concept projects. Replace these with completed work and live repository links.</p></div>
       <div className="project-list">{projects.map(([num,title,type,desc,stack])=><article className="project" key={num}><span className="num">{num}</span><div><small>{type}</small><h3>{title}</h3><p>{desc}</p><label>{stack}</label></div><a href="https://github.com/" target="_blank" rel="noreferrer" aria-label={"Open "+title}><ArrowUpRight/></a></article>)}</div>
     </section>
 
     <section id="skills" className="section wrap">
-      <p className="index">03 <span>— THE TOOLKIT</span></p>
-      <div className="heading"><div><p className="eyebrow">TOOLS OF THE TRADE</p><h2>Sharpening the <em>edge.</em></h2></div><p className="note">Keep only the skills and tools you can confidently explain in an interview.</p></div>
+      <p className="index">03 <span>— Skills</span></p>
+      <div className="heading"><div><p className="eyebrow">Technical toolkit</p><h2>Skills built through <em>practice.</em></h2></div><p className="note">Tools and fundamentals I use to plan, build, test, and improve software.</p></div>
       <div className="skills">{skills.map(([Icon,title,items],i)=><motion.article className="skill" key={title} initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*.06}}><Icon className="skill-icon"/><h3>{title}</h3><div>{items.map(x=><span key={x}>{x}</span>)}</div></motion.article>)}</div>
     </section>
 
     <section id="journey" className="section wrap">
-      <p className="index">04 <span>— THE JOURNEY</span></p>
-      <div className="two"><div><p className="eyebrow">ONE STEP AT A TIME</p><h2>The path is<br/><em>the point.</em></h2></div><div className="timeline">
-        <article><b>NOW</b><div><h3>Building the foundation</h3><p>Strengthening programming, core CS concepts, development, testing, and security fundamentals.</p></div></article>
-        <article><b>NEXT</b><div><h3>Shipping real projects</h3><p>Turning learning into practical applications, documenting decisions, and improving through feedback.</p></div></article>
-        <article><b>AHEAD</b><div><h3>Growing as an engineer</h3><p>Looking for opportunities to contribute, collaborate, and keep learning in a real engineering team.</p></div></article>
+      <p className="index">04 <span>— Growth</span></p>
+      <div className="two"><div><p className="eyebrow">Current direction</p><h2>Learn with purpose.<br/><em>Grow through work.</em></h2></div><div className="timeline">
+        <article><b>NOW</b><div><h3>Building strong foundations</h3><p>Strengthening programming, core computer science concepts, development, testing, and security fundamentals.</p></div></article>
+        <article><b>NEXT</b><div><h3>Shipping practical projects</h3><p>Turning learning into complete applications, documenting decisions, and improving through feedback.</p></div></article>
+        <article><b>GOAL</b><div><h3>Growing as an engineer</h3><p>Contributing to a collaborative engineering team while expanding ownership and technical depth.</p></div></article>
       </div></div>
     </section>
 
     <section id="contact" className="contact wrap">
-      <p className="index">05 <span>— THE NEXT CHAPTER</span></p><p className="eyebrow">HAVE A GOOD CHALLENGE?</p>
-      <h2>Let&apos;s make<br/><em>something matter.</em></h2>
+      <p className="index">05 <span>— Contact</span></p><p className="eyebrow">Open to opportunities</p>
+      <h2>Let&apos;s build<br/><em>something useful.</em></h2>
       <a className="btn" href="mailto:your.email@example.com">Start a conversation <Mail size={17}/></a>
       <div className="social"><a href="https://github.com/" target="_blank" rel="noreferrer"><Github/> GitHub</a><a href="https://linkedin.com/" target="_blank" rel="noreferrer"><Linkedin/> LinkedIn</a><a href="mailto:your.email@example.com"><Mail/> Email</a></div>
-      <footer><span>© 2026 PIYUSH RAJ</span><span>BUILT WITH DISCIPLINE ✳</span><a href="#home">BACK TO TOP ↑</a></footer>
+      <footer><span>© 2026 Piyush Raj</span><span>Designed for clarity</span><a href="#home">Back to top ↑</a></footer>
     </section>
   </main>;
 }
